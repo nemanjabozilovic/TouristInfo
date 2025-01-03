@@ -18,6 +18,7 @@ import com.example.touristinfo.R;
 import com.example.touristinfo.data.models.Location;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -88,7 +89,7 @@ public class LocationsActivity extends AppCompatActivity {
     }
 
     private void sortLocations() {
-        locations.sort((location1, location2) -> location1.getName().compareTo(location2.getName()));
+        locations.sort(Comparator.comparing(Location::getName));
         updateLocationList();
     }
 

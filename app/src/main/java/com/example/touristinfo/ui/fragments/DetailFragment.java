@@ -16,15 +16,6 @@ import com.example.touristinfo.data.models.Location;
 public class DetailFragment extends Fragment {
     private static final String ARG_LOCATION = "location";
 
-    public static DetailFragment newInstance(Location location) {
-        DetailFragment fragment = new DetailFragment();
-        Bundle args = new Bundle();
-        args.putSerializable(ARG_LOCATION, location);
-        fragment.setArguments(args);
-
-        return fragment;
-    }
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,

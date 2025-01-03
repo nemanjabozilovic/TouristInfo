@@ -10,17 +10,15 @@ import com.example.touristinfo.data.models.Location;
 
 public class DetailActivity extends AppCompatActivity {
 
-    private TextView nameTextView, descriptionTextView, contactTextView, workingHoursTextView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        nameTextView = findViewById(R.id.nameTextView);
-        descriptionTextView = findViewById(R.id.descriptionTextView);
-        contactTextView = findViewById(R.id.contactTextView);
-        workingHoursTextView = findViewById(R.id.workingHoursTextView);
+        TextView nameTextView = findViewById(R.id.nameTextView);
+        TextView descriptionTextView = findViewById(R.id.descriptionTextView);
+        TextView contactTextView = findViewById(R.id.contactTextView);
+        TextView workingHoursTextView = findViewById(R.id.workingHoursTextView);
 
         Location location = (Location) getIntent().getSerializableExtra("location");
 
